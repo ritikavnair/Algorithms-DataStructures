@@ -56,10 +56,10 @@ public class PeakFinder {
 		}
 		
 		if(max_j>0 && arr[max_i][max_j-1] > arr[max_i][max_j]) {
-			return find2DPeak(arr, m ,n, max_j-1);
+			return find2DPeak(arr, m ,n, midColumn/2);
 		}
 		else if (max_j<n-1 && arr[max_i][max_j+1] > arr[max_i][max_j]) {
-			return find2DPeak(arr, m ,n, max_j+1);
+			return find2DPeak(arr, m ,n, (n-midColumn)/2);
 		}
 		else
 			return arr[max_i][max_j];			
